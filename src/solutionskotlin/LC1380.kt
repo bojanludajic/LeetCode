@@ -6,16 +6,8 @@ fun main() {
 }
 
 fun luckyNumbers (matrix: Array<IntArray>): List<Int> {
+    val mins = matrix.map { row -> row.min()!! }
     var maxes = mutableListOf<Int>()
-    var mins = mutableListOf<Int>()
-
-    for(i in matrix.indices){
-        var min = matrix[i][0]
-        for(j in matrix[i].indices){
-            min = minOf(min,matrix[i][j])
-        }
-        mins.add(min)
-    }
     for(i in matrix[0].indices) {
         var max = 0
         for(j in matrix.indices) {
