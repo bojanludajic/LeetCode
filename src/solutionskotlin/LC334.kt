@@ -16,3 +16,4 @@ fun increasingTriplet(nums: IntArray): Boolean {
     }
     return false
 }
+
