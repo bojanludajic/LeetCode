@@ -17,7 +17,6 @@ public class LC1679 {
         int count = 0;
         Map<Integer, Integer> map = new HashMap<>();
         for(int num : nums){
-
             int compl = k - num;
             if(map.getOrDefault(compl, 0) > 0) {
                 count++;
