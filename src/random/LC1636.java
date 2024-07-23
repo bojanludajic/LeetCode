@@ -14,22 +14,20 @@ public class LC1636 {
         for(int num : nums) {
             counts.put(num, counts.getOrDefault(num, 0) + 1);
         }
-        List<Integer> keys = new ArrayList<>(counts.keySet());
-        keys.sort((k1, k2) -> {
-            int mapVal = counts.get(k1)- counts.get(k2);
-            if(mapVal != 0) {
-                return mapVal;
+        List<Integer> numList = new ArrayList<>(counts.keySet());
+        numList.sort((n1, n2) -> {
+            int val = counts.get(n1) - counts.get(n2);
+            if(val != 0) {
+                return val;
             }
-            return k2 - k1;
+            return n2 - n1;
         });
-        int c = 0;
         int[] res = new int[nums.length];
-        for(int i = 0; i < keys.size(); i++) {
-            int x = keys.get(i);
+        int c = 0;
+        for(int i : numList) {
             int j = 0;
-            while(j < counts.get(keys.get(i))) {
-                res[c] = x;
-                c++;
+            while(j < counts.get(i)) {
+                res[c++] = i;
                 j++;
             }
         }
