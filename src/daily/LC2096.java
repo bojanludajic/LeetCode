@@ -1,7 +1,5 @@
 package daily;
 
-import random.LC296;
-
 public class LC2096 {
 
     static class TreeNode {

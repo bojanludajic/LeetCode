@@ -1,6 +1,4 @@
-package random;
-
-import com.sun.source.tree.Tree;
+package random.graphstreesetc;
 
 public class LC296 {
 
